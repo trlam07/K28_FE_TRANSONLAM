@@ -3,7 +3,7 @@ import createApi from "../../common/apis";
 
 export const fetchAsyncMovies = createAsyncThunk('movie/fetchAsyncMovies', async(accessToken) => {
     try {
-        const {data} = await createApi(accessToken).get('/movies')
+        const {data} = await createApi(accessToken).get('/movie')
         return data?.data.movies
     } catch (error) {
         console.log(error)
@@ -55,7 +55,7 @@ const movieSlice = createSlice({
         removeMovies: (state) => {
             state.movies = []
         },
-        removeMovie: () => {
+        removeMovie: (state) => {
             state.movie = {}
         }
     },
