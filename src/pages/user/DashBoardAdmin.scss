@@ -1,0 +1,28 @@
+.new-movie-btn{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: max-content;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+.table-header-item {
+    font-weight: 600;
+}
+
+.table-body-item {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid white;
+}

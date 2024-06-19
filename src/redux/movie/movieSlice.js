@@ -21,7 +21,7 @@ export const fetchAsyncMovie = createAsyncThunk('movie/fetchAsyncMovie', async({
 
 export const createNewMovie = createAsyncThunk('movie/createNewMovie', async({accessToken, newMovie}) => {
     try {
-        await createApi(accessToken).post('/movies', {...newMovie})
+        await createApi(accessToken).post('/movie', {...newMovie})
     } catch (error) {
         console.log(error)
     }
@@ -29,7 +29,7 @@ export const createNewMovie = createAsyncThunk('movie/createNewMovie', async({ac
 
 export const updateMovie = createAsyncThunk('movie/updateMovie', async({accessToken, id, dataUpdate}) => {
     try {
-        await createApi(accessToken).put('/movies', {...dataUpdate})
+        await createApi(accessToken).put('/movie', {...dataUpdate})
     } catch (error) {
         console.log(error)
     }
@@ -37,7 +37,7 @@ export const updateMovie = createAsyncThunk('movie/updateMovie', async({accessTo
 
 export const deleteMovie = createAsyncThunk('movie/deleteMovie', async({accessToken, id}) => {
     try {
-        await createApi(accessToken).delete(`/movies/${id}`)
+        await createApi(accessToken).delete(`/movie/${id}`)
     } catch (error) {
         console.log(error)
     }
