@@ -29,11 +29,12 @@ export const createNewMovie = createAsyncThunk('movie/createNewMovie', async({ac
 
 export const updateMovie = createAsyncThunk('movie/updateMovie', async({accessToken, id, dataUpdate}) => {
     try {
-        await createApi(accessToken).put('/movie', {...dataUpdate})
+        await createApi(accessToken).put(`/movie/${id}`, {...dataUpdate})
     } catch (error) {
         console.log(error)
     }
 })
+
 
 export const deleteMovie = createAsyncThunk('movie/deleteMovie', async({accessToken, id}) => {
     try {
