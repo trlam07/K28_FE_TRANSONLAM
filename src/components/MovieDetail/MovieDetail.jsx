@@ -18,3 +18,5 @@ function MovieDetail({movie}) {
 }
 
 export default MovieDetail
+
+
